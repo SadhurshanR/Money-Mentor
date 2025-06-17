@@ -1,0 +1,4 @@
+.env
+money_mentor_log.txt
+__pycache__/
+*.pyc
