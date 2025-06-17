@@ -1,38 +1,45 @@
 # 💸 Money Mentor – AI-Powered Financial Agent
 
-Money Mentor is a personalized AI financial assistant designed to help users make smarter money decisions. It uses a large language model agent to answer financial questions, assist with budgeting, and provide investment tips through a natural and conversational interface. This tool is ideal for students and young adults who want accessible, reliable financial guidance.
+**Money Mentor** is a personalized AI financial assistant designed to help users make smarter money decisions. It answers financial questions, provides budgeting tips, and explains investment concepts—all through natural language conversations. Ideal for students and young adults seeking accessible, trustworthy financial guidance.
 
- 🚀 Features
+---
 
-- 🧠 Multi-agent architecture using LangGraph for structured task flow
-- ⚡ Powered by Groq’s ultra-fast LLaMA 3 for intelligent responses
-- 🔎 Real-time information retrieval through Tavily Search
-- 🖥 Built with Streamlit for a clean and interactive user interface
-- 📄 Saves user conversations to `.txt` for future reference
+## 🚀 Features
 
+- 🧠 Uses the **ReAct agent pattern** for reasoning and action-taking
+- ⚡ Fast and reliable responses powered by **Groq’s LLaMA 3**
+- 🔎 Real-time search via **Tavily API** for up-to-date information
+- 🖥 User-friendly interface built with **Streamlit**
+- 📄 Automatically saves conversation history as `.txt` files
 
- 🤖 Agent Type
+---
 
-Money Mentor is built using a **multi-agent framework** with LangGraph. The agent operates in a workflow that includes:
+## 🧠 How the Agent Works
 
-- **Search Agent** – fetches real-time data using Tavily  
-- **Answer Agent** – processes the user query using LLM reasoning  
-- **Controller** – orchestrates the flow between components to return accurate and reliable answers
+Money Mentor follows the **ReAct (Reason + Act)** agent pattern, where the AI agent:
+
+1. **Reasons** about the user’s question using its internal knowledge
+2. **Acts** by deciding whether to take a tool-based action—like searching the web
+3. **Observes** the result (e.g., from Tavily Search)
+4. **Thinks** again and continues reasoning
+5. **Responds** with a final, fact-based answer
+
+This cycle allows the agent to combine both **tool usage (action)** and **LLM reasoning** to produce accurate and useful financial advice.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Python** – Core development language
-- **LangGraph** – Multi-agent workflow orchestration
-- **Groq (LLaMA 3)** – Large Language Model backend
-- **Tavily API** – Real-time search augmentation
-- **Streamlit** – Web UI for user interaction
-- **dotenv** – Environment variable management for API keys
+- **Python** – Core language for development
+- **LangGraph** – Framework to orchestrate agent logic
+- **Groq (LLaMA 3)** – Large Language Model provider
+- **Tavily API** – Real-time web search for external data
+- **Streamlit** – Lightweight UI framework for quick deployment
+- **python-dotenv** – To manage API keys securely using `.env` file
 
 ---
 
 ## 📦 Required Dependencies
 
-Add these to your `requirements.txt`:
+Included in `requirements.txt`:
 
